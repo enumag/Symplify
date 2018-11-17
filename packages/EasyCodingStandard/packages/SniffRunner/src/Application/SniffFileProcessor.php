@@ -95,7 +95,7 @@ final class SniffFileProcessor implements FileProcessorInterface, DualRunAwareFi
         DifferInterface $differ,
         AppliedCheckersCollector $appliedCheckersCollector,
         CurrentFileProvider $currentFileProvider,
-        array $sniffs
+        array $sniffs = []
     ) {
         $this->fixer = $fixer;
         $this->fileFactory = $fileFactory;
@@ -188,7 +188,7 @@ final class SniffFileProcessor implements FileProcessorInterface, DualRunAwareFi
     {
         if (! defined('PHP_CODESNIFFER_VERBOSITY')) {
             define('PHP_CODESNIFFER_VERBOSITY', 0);
-            new Tokens();
+            //new Tokens();
         }
     }
 
